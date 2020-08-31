@@ -2,10 +2,12 @@
 const _ = require('lodash'),
 	clc = require('cli-color'),
 	// redisServices = require('../redis'),
-	kafkaServices = require('../kafka'),
+	// kafkaServices = require('../kafka'),
 	mongooseTesting = require('../mongoose_testing'),
+	tsTesting = require('../typescript_testing'),
 	{failedToGetDatabaseConnection} = require('../../../configs/res_codes'),
 	DbConnection = require('../../dataaccess/dbconnection').DbConnection;
+
 
 async function addBuyOrder (req,res){
 	try {
@@ -165,8 +167,6 @@ async function getDataFromRedis(req,res){
 }
 //endregion
 
-
-
 //region Binary Tree Functions
 var buyOrdersArray = [], sellOrdersArray = [];
 (async getAllOrders=> {
@@ -223,6 +223,12 @@ function insertNode(tree,value) {
 	return tree;
 }
 //endregion
+
+
+(runTScriptTesting=>{
+	var obj = new tsTesting.Greeting();
+	obj.greet();
+})();
 
 
 module.exports = {
