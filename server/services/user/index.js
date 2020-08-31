@@ -4,7 +4,7 @@ const _ = require('lodash'),
 	// redisServices = require('../redis'),
 	// kafkaServices = require('../kafka'),
 	mongooseTesting = require('../mongoose_testing'),
-	tsTesting = require('../typescript_testing'),
+	tsTesting = require('../typescript_testing/index.js'),
 	{failedToGetDatabaseConnection} = require('../../../configs/res_codes'),
 	DbConnection = require('../../dataaccess/dbconnection').DbConnection;
 
@@ -227,7 +227,7 @@ function insertNode(tree,value) {
 
 (runTScriptTesting=>{
 	var obj = new tsTesting.Greeting();
-	obj.greet();
+	obj.greet()
 })();
 
 
