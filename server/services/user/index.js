@@ -4,6 +4,7 @@ const _ = require('lodash'),
 	// redisServices = require('../redis'),
 	// kafkaServices = require('../kafka'),
 	mongooseTesting = require('../mongoose_testing'),
+	sequelizeTesting = require('../sequelize_testing/script'),
 	tsTesting = require('../typescript_testing/index.js'),
 	{failedToGetDatabaseConnection} = require('../../../configs/res_codes'),
 	DbConnection = require('../../dataaccess/dbconnection').DbConnection;
