@@ -12,7 +12,7 @@ function init(server) {
     });
 
     server.get('/', function (req, res) {
-        res.send('|--- Evaluation Test By Basit ---|')
+        res.render('index', { greeting: 'Welcome' });
     });
 
     server.use('/api',apiRoute);

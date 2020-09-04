@@ -17,12 +17,17 @@ create = function (config) {
     server.set('env', config.env);
     server.set('port', config.serverPort);
     server.set('hostname', config.hostname);
+    server.set('viewDir', config.viewDir);
 
     // Returns middleware that parses json
     server.use(bodyParser.json());
 
     // setup public directory
-    server.use(express.static('public'));
+    server.use(express.static(config.publicDir));
+
+    // Setup view engine
+    server.set('views', server.get('viewDir'));
+    server.set('view engine', '.ejs');
 
     // Set up routes
     routes.init(server);
