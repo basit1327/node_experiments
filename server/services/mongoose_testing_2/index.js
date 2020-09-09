@@ -15,7 +15,7 @@ async function connectMongo(){
 		console.log(clc.green('[--Mongoose connection successful--]'));
 		// InsertRecords();
 		// getRecord()
-		// addNewVote()
+		addNewVote()
 	} else {
 		console.log(clc.red('Mongoose connection was unsuccessful'));
 	}
@@ -61,7 +61,8 @@ async function addNewVote (){
 			if (error) {
 				console.log(error);
 			} else {
-				console.log(success);
+				// console.log(success);
+				console.log(clc.green('New vote added'));
 			}
 		})
 }

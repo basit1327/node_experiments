@@ -1,0 +1,16 @@
+Steps for starting Kafka
+1) Start Zookeeper server
+2) Start Kafka server
+
+1.1) bin/zkServer.sh start
+1.2) bin/zkCli.sh
+To stop zookeeper server (bin/zkServer.sh stop)
+
+
+2.1) bin/windows/kafka-server-start.bat config/server.properties
+To stop kafka server ( bin/kafka-server-stop.bat config/server.properties)
+
+
+Useful Links:
+https://stackoverflow.com/questions/59481878/unable-to-start-kafka-with-zookeeper-kafka-common-inconsistentclusteridexceptio
+https://stackoverflow.com/questions/54151351/i-cant-run-kafka-on-windows
