@@ -4,7 +4,7 @@ const mongoose = require('mongoose'),
 	models = require('./models');
 
 async function connectMongo(){
-	let mongooseConn = await mongoose.connect('mongodb://localhost/rns_mongodb', {
+	let mongooseConn = await mongoose.connect('mongodb://172.19.0.2:27017/rns_mongodb', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		useFindAndModify: false,
