@@ -1,7 +1,7 @@
 "use strict";
 var Sequelize = require('sequelize');
 var sequelize = new Sequelize('iukl', 'root', 'root',{
-	host: 'localhost',
+	host: '172.19.0.4',
 	dialect: 'mysql',
 	pool: {
 		max: 5,
